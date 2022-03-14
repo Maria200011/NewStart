@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  task1.Prompt the user for a number in the range 0…100.  If the number is out of range, display an error message
+      //  and prompt again until a valid number is entered.  Assume the user enters a number each time.
+      //   let num;
+      //   do {
+      //     num = prompt(" Write number in the range 0…100. ");
+      //     alert("error");
+      //   } while (num < 0 || num > 100);
+
+      // task2.Repeat previous exercise, but this time allow for the possibility that the user enters something that is not a number.
+      //  Hint: the built in function isNaN(x) returns true if x is not a number.  It returns false if x is a number.
+      // let num;
+      //   do {
+      //     num = prompt(" Write number in the range 0…100. ")
+      //     console.log("error")
+      //   } while (num < 0 || num > 100 || isNaN(num));
+
+      // task3.Prompt for an integer, then display the average of the integers from 0 through the number entered.
+      //  For example, if you enter 10, then display 5 which is the average of   (0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)/11
+
+      // let sum = 0;
+      // let num = +prompt(" Write integer number");
+      // if (num % 1 === 0) {
+      //   let aver = num + 1;
+      //   while (num > 0) {
+      //     sum = sum + num;
+      //     num--;
+      //   }
+      //   console.log(sum / aver);
+      // }else{
+      //   console.log("error")
+      // }
+
+      // task4.Write a JS code to print a 2D array. Use this array as input
+      // 	 [[1, 2], [3, 4], [5, 6]];
+
+      //   const arr = [
+      //     [1, 2],
+      //     [3, 4],
+      //     [5, 6],
+      //   ];
+      //   arr.forEach((val) => console.log(val));
+      //  task5. Write a JS code to delete all occurrence of element in given array.
+      let arr = [
+          [1, 2],
+          [3, 4],
+          [5, 6],
+        ];
+        for(let i=0;i<arr.length;i++) {
+               for(let j=0; j<arr[i].length;j++) {
+                   arr[i].length=0
+               }
+           }
+       console.log(arr)
+
+      // task6. Write a JS code to find the power of a number using for loop.
+      //      let arr = [
+      //         [1, 2],
+      //        [3, 4],
+      //        [5, 6],
+      //      ];
+      //      for(let i=0;i<arr.length;i++) {
+      //          for(let j=0; j<arr[i].length;j++) {
+      //              arr[i][j]=Math.pow(arr[i][j],2)
+      //          }
+      //      }
+      //    console.log(arr)
+
+      // task7.Write a JS code to find the number of digits in a number
+      // let num = -3783485;
+      // let digits = 0;
+      // do {
+      //   digits++;
+      //   num = (Math.trunc(Math.abs(num) / 10));
+      // } while (num > 0);
+      // console.log(digits)
+    </script>
+  </body>
+</html>
