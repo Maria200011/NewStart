@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  task1   You’ll need two arrays of “friends” from two mock users so that you can extract the names of the followers who exist in both lists.
+      //     Make a variable called bobsFollowers and
+      //    set it equal to an array with four strings representing the names of Bob’s friends.
+      //   Make a variable called tinasFollowers and set it equal to an array with three strings representing the names of
+      //   Tina’s friends. Make exactly two of these the same as two of the friends in the bobsFollowers array.
+      //   Create a nested loop that iterates through bobsFollowers as the array for the outer loop and tinasFollowers
+      //    as the array for the inner loop. If the current element from the outer loop is the same as the current element
+      //    from the inner loop, push that element into the mutualFollowers array.\
+
+      //   const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
+      //   const tinasFollowers = ["Jim", "Benjamin", "Luka"];
+      //   let mutualFollowers = [];
+      //   //   for (let i = 0; i < bobsFollowers.length; i++) {
+      //   //     for (let j = 0; j < tinasFollowers.length; j++) {
+      //   //       if (bobsFollowers[i] === tinasFollowers[j]) {
+      //   //         mutualFollowers.push(bobsFollowers[i]);
+      //   //       }
+      //   //     }
+      //   //   }
+      //   //   console.log(mutualFollowers);
+      //   2st example
+      //   const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
+      //   const tinasFollowers = ["Jim", "Benjamin", "Luka"];
+      //   let mutualFollowers = [];
+      //   for (let i = 0; i < bobsFollowers.length; i++) {
+      //     tinasFollowers.forEach((val) => {
+      //       if (bobsFollowers[i] === val) {
+      //         mutualFollowers.push(bobsFollowers[i]);
+      //       }
+      //     });
+      //   }
+      //   console.log(mutualFollowers);
+
+      //   task2.Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz"
+      //   instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+      // for (let i = 1; i < 100; i++) {
+      //   if (i % 3 === 0 && i % 5 === 0) {
+      //     console.log("FizzBuzz");
+      //   } else if (i % 3 === 0) {
+      //     console.log("Fizz");
+      //   } else if (i % 5 === 0) {
+      //     console.log("Buzz");
+      //   } else {
+      //     console.log(i);
+      //   }
+      // }
+
+      //       task3.According to Wikipedia a happy number is defined by the following process :
+      //   "Starting with any positive integer, replace the number by the sum of the squares of its digits,
+      //    and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a
+      //    cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers,
+      //    while those that do not end in 1 are unhappy numbers (or sad numbers)".
+      //   Write a JavaScript program to find and print the first 5 happy numbers.
+      // let num
+      // let pow = 0;
+      // let i;
+      // for (num = 1; num < 20; num++) {
+      //   while (num >0){
+      //     pow=pow+num**2;
+      //     num = num % 10;
+      //   }
+      // }console.log(pow)
+
+      //       task4.Write a JavaScript program to find the armstrong numbers of 3 digits.
+      // Note : An Armstrong number of three digits is an integer such that the sum of
+      //  the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
+      // let num
+      // for (let i = 100; i < 999; i++) {
+      //    num=i.toString().split("");
+      // }
+      //  task5.Write a JavaScript program that prints the most frequent element in an array.
+      let arr = [1, 5, 2, 8, 5, 4, 9, 5, 3, 5, 7, 3];
+      let count = 0;
+      let first = 1;
+      let element;
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i; j < arr.length; j++) {
+          if (arr[i] === arr[j]) {
+            count++;
+            if (first < count) {
+              first = count;
+              element = arr[i];
+            }
+          }
+        }
+        count = 0;
+      }
+      alert(element);
+
+      // task6. Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign.
+      // const a=45
+      // const b=-34
+      // const c=6
+      // if(a*b*c>0) {
+      //   alert("+")
+      // }
+      // else if(a*b*c<0){
+      //   alert("-")
+      // }
+
+      // tast7.Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the result.
+      // const arr=[8,3,6]
+      // let arr2=arr.sort()
+      // console.log(arr2)
+
+      // 2st
+      // let arr=[8,3,6]
+      // let min=arr[0]
+      // for (let i=0;i<arr.length;i++){
+      //   if (min>arr[i]){
+      //     min=arr[i]
+      //   }
+
+      // }console.log(arr)
+    </script>
+  </body>
+</html>
