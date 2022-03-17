@@ -17,44 +17,44 @@
       //    as the array for the inner loop. If the current element from the outer loop is the same as the current element
       //    from the inner loop, push that element into the mutualFollowers array.\
 
-      //   const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
-      //   const tinasFollowers = ["Jim", "Benjamin", "Luka"];
-      //   let mutualFollowers = [];
-      //   //   for (let i = 0; i < bobsFollowers.length; i++) {
-      //   //     for (let j = 0; j < tinasFollowers.length; j++) {
-      //   //       if (bobsFollowers[i] === tinasFollowers[j]) {
-      //   //         mutualFollowers.push(bobsFollowers[i]);
-      //   //       }
-      //   //     }
-      //   //   }
-      //   //   console.log(mutualFollowers);
-      //   2st example
-      //   const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
-      //   const tinasFollowers = ["Jim", "Benjamin", "Luka"];
-      //   let mutualFollowers = [];
-      //   for (let i = 0; i < bobsFollowers.length; i++) {
-      //     tinasFollowers.forEach((val) => {
-      //       if (bobsFollowers[i] === val) {
-      //         mutualFollowers.push(bobsFollowers[i]);
-      //       }
-      //     });
-      //   }
-      //   console.log(mutualFollowers);
+        const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
+        const tinasFollowers = ["Jim", "Benjamin", "Luka"];
+        let mutualFollowers = [];
+          for (let i = 0; i < bobsFollowers.length; i++) {
+            for (let j = 0; j < tinasFollowers.length; j++) {
+              if (bobsFollowers[i] === tinasFollowers[j]) {
+                mutualFollowers.push(bobsFollowers[i]);
+              }
+            }
+          }
+          console.log(mutualFollowers);
+        2st example
+        const bobsFollowers = ["Nina", "Jim", "Julian", "Luka"];
+        const tinasFollowers = ["Jim", "Benjamin", "Luka"];
+        let mutualFollowers = [];
+        for (let i = 0; i < bobsFollowers.length; i++) {
+          tinasFollowers.forEach((val) => {
+            if (bobsFollowers[i] === val) {
+              mutualFollowers.push(bobsFollowers[i]);
+            }
+          });
+        }
+        console.log(mutualFollowers);
 
       //   task2.Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz"
       //   instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
-      // for (let i = 1; i < 100; i++) {
-      //   if (i % 3 === 0 && i % 5 === 0) {
-      //     console.log("FizzBuzz");
-      //   } else if (i % 3 === 0) {
-      //     console.log("Fizz");
-      //   } else if (i % 5 === 0) {
-      //     console.log("Buzz");
-      //   } else {
-      //     console.log(i);
-      //   }
-      // }
+      for (let i = 1; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+          console.log("Fizz");
+        } else if (i % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
 
       //       task3.According to Wikipedia a happy number is defined by the following process :
       //   "Starting with any positive integer, replace the number by the sum of the squares of its digits,
@@ -100,19 +100,19 @@
 
       // task6. Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign.
       // const a=45
-      // const b=-34
-      // const c=6
-      // if(a*b*c>0) {
-      //   alert("+")
-      // }
-      // else if(a*b*c<0){
-      //   alert("-")
-      // }
+      const b=-34
+      const c=6
+      if(a*b*c>0) {
+        alert("+")
+      }
+      else if(a*b*c<0){
+        alert("-")
+      }
 
       // tast7.Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the result.
-      // const arr=[8,3,6]
-      // let arr2=arr.sort()
-      // console.log(arr2)
+      const arr=[8,3,6]
+      let arr2=arr.sort()
+      console.log(arr2)
 
       // 2st
       // let arr=[8,3,6]
