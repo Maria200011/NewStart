@@ -95,6 +95,18 @@
       } else {
         alert("«год не високосный».");
       }
+
+      //   2st example
+
+      let year = prompt("Wright Year", 2002);
+      alert(
+        year % 4 === 0 && year % 100 != 0
+          ? "«високосный год»"
+          : year % 400 == 0
+          ? "«високосный год»"
+          : "«год не високосный»."
+      );
+
       //       3. Find the number of days in a given month of a year.
       // If month is outside the range of 1 and 12 print “Invalid month”.
       // If month is equal to 2 ie, February print “29 days” if leap year else print “28 days” .
@@ -111,6 +123,18 @@
       } else {
         alert("«31 день»");
       }
+
+      //   2st example
+      let month = prompt("Wright month number");
+      alert(
+        month < 1 || month > 12 || isNaN(month)
+          ? "«Неверный месяц»"
+          : month == 2
+          ? "«29 days»"
+          : month == 4 || month == 6 || month == 9 || month == 11
+          ? "«30 days»"
+          : "«31 days»"
+      );
     </script>
   </body>
 </html>
