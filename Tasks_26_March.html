@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a JavaScript conditional statement to sort 4 numbers (a, b, c, d). And print result.
+      let a = 0;
+      let b = 6;
+      let c = 2;
+      let d = 20;
+      if (a < b && a < c && a < d && b < c && b < d) {
+        if (c < d) {
+          console.log(a + ", " + b + ", " + c + ", " + d);
+        } else if (d < c) {
+          console.log(a + ", " + b + ", " + d + ", " + c);
+        }
+      } else if (a < b && a < c && a < d && b > c && b > d) {
+        if (c < d) {
+          console.log(a + ", " + c + ", " + d + "," + b);
+        } else if (d < c) {
+          console.log(a + ", " + d + ", " + c + ", " + b);
+        }
+      } else if (a < b && a < c && a < d && b > c && b < d) {
+        if (c < d) {
+          console.log(a + ", " + c + ", " + b + "," + d);
+        } else if (d < c) {
+          console.log(a + ", " + d + ", " + b + ", " + c);
+        }
+      } else if (b < a && b < c && b < d && a < c && a < d) {
+        if (c < d) {
+          console.log(b + ", " + a + ", " + c + ", " + d);
+        } else if (d < c) {
+          console.log(b + ", " + a + ", " + d + ", " + c);
+        }
+      } else if (b < a && b < c && b < d && a > c && a > d) {
+        if (c < d) {
+          console.log(b + ", " + c + ", " + d + ", " + a);
+        } else if (d < c) {
+          console.log(b + ", " + d + ", " + c + ", " + a);
+        }
+      } else if (b < a && b < c && b < d && a < c && a > d) {
+        if (c < d) {
+          console.log(b + ", " + a + ", " + c + ", " + d);
+        } else if (d < c) {
+          console.log(b + ", " + d + ", " + a + ", " + c);
+        }
+      } else if (c < a && c < b && c < d && d < a && d < b) {
+        if (a < b) {
+          console.log(c + ", " + d + ", " + a + ", " + b);
+        } else if (b < a) {
+          console.log(c + ", " + d + ", " + b + ", " + a);
+        }
+      } else if (c < a && c < b && c < d && d > a && d > b) {
+        if (a < b) {
+          console.log(c + ", " + a + ", " + b + ", " + d);
+        } else if (b < a) {
+          console.log(c + ", " + b + ", " + a + ", " + d);
+        }
+      } else if (c < a && c < b && c < d && d < a && d > b) {
+        if (b < a) {
+          console.log(c + ", " + b + ", " + d + ", " + a);
+        }
+      } else if (d < a && d < b && d < c && c < a && c < b) {
+        if (a < b) {
+          console.log(d + ", " + c + ", " + a + ", " + b);
+        } else if (b < a) {
+          console.log(d + ", " + c + ", " + b + ", " + a);
+        }
+      } else if (d < a && d < b && d < c && c > a && c > b) {
+        if (a < b) {
+          console.log(d + ", " + a + ", " + b + ", " + c);
+        } else if (b < a) {
+          console.log(d + ", " + b + ", " + a + ", " + c);
+        }
+      } else if (d < a && d < b && d < c && c < a && c > b) {
+        if (b < a) {
+          console.log(d + ", " + b + ", " + c + ", " + a);
+        }
+      }
+
+      //       2. find if the given year is a leap year or not by using %, !=, && and
+      //       || operators in JavaScript. If year is divisble by 4 and not divisble by 100 then print “leap year”.
+      // Or if year is divisible by 400 then print “leap year”.
+      // Else print “not a leap year”.
+      let year = prompt("Wright Year", 2002);
+      if (year % 4 === 0 && year % 100 != 0) {
+        alert("«високосный год»");
+      } else if (year % 400 == 0) {
+        alert("«високосный год»");
+      } else {
+        alert("«год не високосный».");
+      }
+      //       3. Find the number of days in a given month of a year.
+      // If month is outside the range of 1 and 12 print “Invalid month”.
+      // If month is equal to 2 ie, February print “29 days” if leap year else print “28 days” .
+      // Else if month is equal to 4, 6, 9 or 11 print “30 days”.
+      // Else print “31 days”.
+
+      let month = prompt("Wright month number");
+      if (month < 1 || month > 12 || isNaN(month)) {
+        alert("«Неверный месяц»");
+      } else if (month == 2) {
+        alert("«29 days»");
+      } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        alert("«30 days»");
+      } else {
+        alert("«31 день»");
+      }
+    </script>
+  </body>
+</html>
