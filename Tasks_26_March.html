@@ -88,23 +88,18 @@
       // Or if year is divisible by 400 then print “leap year”.
       // Else print “not a leap year”.
       let year = prompt("Wright Year", 2002);
-      if (year % 4 === 0 && year % 100 != 0) {
-        alert("«високосный год»");
-      } else if (year % 400 == 0) {
-        alert("«високосный год»");
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        alert("«leap year»");
       } else {
-        alert("«год не високосный».");
+        alert("«not a leap year».");
       }
-
       //   2st example
 
       let year = prompt("Wright Year", 2002);
       alert(
-        year % 4 === 0 && year % 100 != 0
-          ? "«високосный год»"
-          : year % 400 == 0
-          ? "«високосный год»"
-          : "«год не високосный»."
+        (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)
+          ? ("«leap year»")
+          : ("«not a leap year».")
       );
 
       //       3. Find the number of days in a given month of a year.
@@ -114,26 +109,36 @@
       // Else print “31 days”.
 
       let month = prompt("Wright month number");
+      let year = prompt("Wright Year", 2002);
+
       if (month < 1 || month > 12 || isNaN(month)) {
-        alert("«Неверный месяц»");
-      } else if (month == 2) {
+        alert("«Invalid month»");
+      } else if (
+        (month === 2 && year % 4 === 0 && year % 100 !== 0) ||
+        year % 400 === 0
+      ) {
+        alert("«28 days»");
+      } else if (month === 2) {
         alert("«29 days»");
-      } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+      } else if (month === 4 || month === 6 || month === 9 || month === 11) {
         alert("«30 days»");
       } else {
-        alert("«31 день»");
+        alert("«31 days»");
       }
 
       //   2st example
       let month = prompt("Wright month number");
       alert(
         month < 1 || month > 12 || isNaN(month)
-          ? "«Неверный месяц»"
+          ? ("«Invalid month»")
           : month == 2
-          ? "«29 days»"
-          : month == 4 || month == 6 || month == 9 || month == 11
-          ? "«30 days»"
-          : "«31 days»"
+          ? ("«29 days»")
+          : (month === 2 && year % 4 === 0 && year % 100 !== 0) ||
+            (year % 400 === 0)
+          ? ("«28 days»")
+          : (month === 4 || month === 6 || month === 9 || month === 11)
+          ? ("«30 days»")
+          : ("«31 days»")
       );
     </script>
   </body>
