@@ -9,6 +9,21 @@
   <body>
     <script>
       // 1. Write a JavaScript conditional statement to sort 4 numbers (a, b, c, d). And print result.
+
+      const arr = [7, 10, 1, 5];
+      for (let j = 1; j < 3; j++) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i + 1] < arr[i]) {
+            let max = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = max;
+          }
+        }
+      }
+      console.log(arr);
+
+      // 2st example
+
       let a = 0;
       let b = 6;
       let c = 2;
@@ -97,9 +112,9 @@
 
       let year = prompt("Wright Year", 2002);
       alert(
-        (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)
-          ? ("«leap year»")
-          : ("«not a leap year».")
+        (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+          ? "«leap year»"
+          : "«not a leap year»."
       );
 
       //       3. Find the number of days in a given month of a year.
@@ -130,15 +145,15 @@
       let month = prompt("Wright month number");
       alert(
         month < 1 || month > 12 || isNaN(month)
-          ? ("«Invalid month»")
+          ? "«Invalid month»"
           : month == 2
-          ? ("«29 days»")
+          ? "«29 days»"
           : (month === 2 && year % 4 === 0 && year % 100 !== 0) ||
-            (year % 400 === 0)
-          ? ("«28 days»")
-          : (month === 4 || month === 6 || month === 9 || month === 11)
-          ? ("«30 days»")
-          : ("«31 days»")
+            year % 400 === 0
+          ? "«28 days»"
+          : month === 4 || month === 6 || month === 9 || month === 11
+          ? "«30 days»"
+          : "«31 days»"
       );
     </script>
   </body>
