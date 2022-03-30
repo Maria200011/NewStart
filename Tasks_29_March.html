@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Create a program that takes an array of numbers and prints both the minimum and maximum numbers, in that order.
+      //       const arr = [7, 4, 8, 35, 75, 46, 2, 67, 5, 8, 4, 6, 48];
+      //       let min = arr[0];
+      //       let max=arr[0]
+      //       for (let i = 1; i < arr.length; i++) {
+      //         if (arr[i] < min) {
+      //           min = arr[i];
+      //         }
+      //         else if(arr[i]>max){
+      //           max=arr[i]
+      //         }
+      //       }
+      // console.log(min)
+      // console.log(max)
+
+      
+
+      //       2. Create a program that prints true if the first array can be nested inside the second.
+      // arr1 can be nested inside arr2 if:
+      // arr1's min is greater than arr2's min.
+      // arr1's max is less than arr2's max.
+      let arr1 = [7, 4, 8, 35, 75, 46];
+      let arr2 = [2, 67, 5, 8, 4, 6, 48];
+      let max = arr1[0];
+      let min = arr1[0];
+      let max1 = arr2[0];
+      let min1 = arr2[0];
+      for (let i = 1; i < arr1.length; i++) {
+        if (arr1[i] < min) {
+          min = arr1[i];
+        } else if (arr1[i] > max) {
+          max = arr1[i];
+        }
+      }
+      for (let i = 1; i < arr2.length; i++) {
+        if (arr2[i] < min1) {
+          min1 = arr2[i];
+        } else if (arr2[i] > max1) {
+          max1 = arr2[i];
+        }
+      }
+      // if (min > min1 && max < max1) {
+      //   console.log("true");
+      // } else {
+      //   console.log("false");
+      // }
+      console.log((min > min1 && max < max1)?("true"):("false"))
+
+      // 3.Given a number, return an array containing the two halves of the number. If the number is odd, make the rightmost number higher.
+
+      //  4.Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+      // const arr=[7,11,17,"gmail","red",45,2,"green",3,"color"]
+      // let arr1=[]
+      // for(let i=0;i<arr.length;i++){
+      //     if(typeof(arr[i])==="number"){
+      //         arr1.push(arr[i])
+      //     }}
+      //     console.log(arr1)
+    </script>
+  </body>
+</html>
