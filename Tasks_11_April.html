@@ -8,23 +8,23 @@
   </head>
   <body>
     <script>
-      //           1. Exercise - A Sandwich Calculator
+      // //           1. Exercise - A Sandwich Calculator
 
-      //   Write a function called sandwich calculator. This should accept one value: bread
-      //   The function should return the total number of possible sandwiches based on the amount of breads available.
-      //   I need 2 breads to make one sandwich, so if there are 10 breads, it should return 5. Test your function with console.log.
-      //   Extend your function so it accepts two values, bread and cheese.
-      //   It takes two sbreads and one cheese to make a sandwich. The function should return the total number of possible sandwiches,
-      //    so if there are breads, but only 1 cheese, it should return 1.
+      // //   Write a function called sandwich calculator. This should accept one value: bread
+      // //   The function should return the total number of possible sandwiches based on the amount of breads available.
+      // //   I need 2 breads to make one sandwich, so if there are 10 breads, it should return 5. Test your function with console.log.
+      // //   Extend your function so it accepts two values, bread and cheese.
+      // //   It takes two sbreads and one cheese to make a sandwich. The function should return the total number of possible sandwiches,
+      // //    so if there are breads, but only 1 cheese, it should return 1.
 
-      // a.
-      // function calcSendwich(bread){
-      //     if(bread>0){
-      //         return Math.floor(bread/2)
-      //     }
+      // // a.
+      // function calcSendwich(bread) {
+      //   if (bread > 0) {
+      //     return Math.floor(bread / 2);
+      //   }
       // }
-      // console.log(calcSendwich(9))
-      // // b.
+      // console.log(calcSendwich(9));
+      // // // b.
       // let send = 0;
       // function calcSendwich(bread, cheese) {
       //   if (bread > 0 && cheese > 0) {
@@ -38,24 +38,25 @@
       // }
       // console.log(calcSendwich(20, 6));
 
-      // 2. Write a JavaScript function that reverse a number
+      // // 2. Write a JavaScript function that reverse a number
       // function reverser(number) {
       //   return number.split("").reverse().join("");
       // }
       // console.log(reverser("2645"));
-      // 2st
+      // // 2st
       // function reverser(number) {
-      //   let arr=[]
+      //   let arr = [];
       //   while (number > 0) {
-      //           oneNumber = number % 10;
-      //           number = Math.floor(number / 10);
-      //             arr.push(oneNumber);
-      //           }
-      //         return arr.join("")}
-      //         console.log(reverser(48594))
+      //     oneNumber = number % 10;
+      //     number = Math.floor(number / 10);
+      //     arr.push(oneNumber);
+      //   }
+      //   return arr.join("");
+      // }
+      // console.log(reverser(48594));
 
-      //   3. Write a JavaScript function that checks whether a passed string is palindrome or not?
-      // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+      // //   3. Write a JavaScript function that checks whether a passed string is palindrome or not?
+      // // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 
       // function isPalindrom(word) {
       //   let word2 = word.split("").reverse().join("");
@@ -64,37 +65,62 @@
 
       // console.log(isPalindrom("madarfgvm"));
 
-//       4.Write a JavaScript function that generates all combinations of a string.
-// Example string : 'dog'
-// Expected Output : d,do,dog,o,og,g
+      // //       4.Write a JavaScript function that generates all combinations of a string.
+      // // Example string : 'dog'
+      // // Expected Output : d,do,dog,o,og,g
 
-function combinGenerate (word){
-    let arr= [];
-      for(let i = 0 ;i < word.length; i++)
-    {
-        for(let j = i + 1; j< word.length + 1; j++)
-        {
-            arr.push(word.slice(i , j));
-        }
-    }
-   return arr;
-}
-console.log(combinGenerate('Dog'));
+      // function combinGenerate(word) {
+      //   let arr = [];
+      //   for (let i = 0; i < word.length; i++) {
+      //     for (let j = i + 1; j < word.length + 1; j++) {
+      //       arr.push(word.slice(i, j));
+      //     }
+      //   }
+      //   return arr;
+      // }
+      // console.log(combinGenerate("Dog"));
 
+      // //       5.Write a JavaScript function that returns a passed string with letters in alphabetical order.
+      // // Example string : 'webmaster'
+      // // Expected Output : 'abeemrstw'
+      // // Assume punctuation and numbers symbols are not included in the passed string.
+      // // function stringSorter(word) {
+      // //   let word2 = word.split("").sort().join("");
+      // //   return word2;
+      // // }
+      // // console.log(stringSorter("wordajnsdkjnsld"));
+      // function stringSorter(word){
+      //   for(let i=0; i<word.length; i++){
+      //     for (let j = 0; j < word.length; j++) {
+      //       let element = word [j];
+      //       word[j]=word[j+1]
+      //       word[j+1]=element
 
-
-
-
-
-//       5.Write a JavaScript function that returns a passed string with letters in alphabetical order.
-// Example string : 'webmaster'
-// Expected Output : 'abeemrstw'
-// Assume punctuation and numbers symbols are not included in the passed string.
-// function stringSorter(word){
-//   let word2=word.split("").sort().join("")
-// return word2
-// }
-// console.log(stringSorter("wordajnsdkjnsld"))
+      //     }
+      //   }
+      //   return word
+      // }
+      // console.log(stringSorter("webmaster"))
+      function stringSorter(word) {
+        let checked;
+        let len = word.length;
+        do {
+          checked = false;
+          for (let i = 0; i < len; i++) {
+            if (word[i] > word[i + 1]) {
+              let tmp = word[i];
+              word[i] = word[i + 1];
+              word[i + 1] = tmp;
+              checked = true;
+            }
+          }
+        } while (checked);
+        return word;
+      }
+      let arr = "webmaster";
+      let arr2 = arr.split("");
+      let sortidList = stringSorter(arr2);
+      console.log(sortidList.join(""));
     </script>
   </body>
 </html>
