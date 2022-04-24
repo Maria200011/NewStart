@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //        function insSorting(arr) {
+      //   for (let i = 1; i < arr.length; i++) {
+      //     let min = arr[i];
+
+      //     let j = i - 1;
+      //     while (j > -1 && min < arr[j]) {
+      //       arr[j + 1] = arr[j];
+      //       j--;
+      //     }
+      //     arr[j + 1] = min;
+      //   }
+      //   return arr;
+      // }
+      // console.log(insSorting([4, 6, 2, 8, 9, 3, 5]));
+
+      function selSorting(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          let min = i;
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[min]) {
+              min = j;
+            }
+          }
+          if (min != i) {
+            let start = arr[i];
+            arr[i] = arr[min];
+            arr[min] = start;
+          }
+        }
+        return arr;
+      }
+      console.log(selSorting([4, 6, 2, 8, 9, 3, 5]));
+    </script>
+  </body>
+</html>
